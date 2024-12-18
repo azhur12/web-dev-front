@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Table Builder - Alexander Zhurba</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script/table-builder.js" defer></script>
+</head>
+<body>
+<header>
+  <h1>CV-Portfolio</h1>
+  <p>Alexander Zhurba group M3309</p>
+</header>
+<nav>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contacts.html">Contacts</a></li>
+    <li><a href="market-indexes.html">Market Indexes</a></li>
+    <li><a href="table-builder.html">Table Builder</a></li>
+  </ul>
+</nav>
+<main>
+  <section>
+    <h2>Table Builder</h2>
+    <form id="tableForm" class="form">
+      <label class="form-label">
+        Number of Days:
+        <input type="number" name="days" class="form-input" min="1" max="7" required>
+      </label>
+      <label class="form-label">
+        Max Lessons Per Day:
+        <input type="number" name="lessons" class="form-input" min="1" max="10" required>
+      </label>
+      <label class="form-label">
+        Language:
+        <select name="language" class="form-select">
+          <option value="en">English</option>
+          <option value="ru">Russian</option>
+        </select>
+      </label>
+      <div class="button-group">
+        <button type="submit" class="btn btn-primary">Generate Table</button>
+        <button type="button" id="saveParams" class="btn btn-secondary">Save Parameters</button>
+        <button type="button" id="loadParams" class="btn btn-secondary">Load Parameters</button>
+      </div>
+    </form>
+    <div id="preloader" class="preloader" style="display: none;">
+      <img src="images/preloader.gif" alt="Loading..." />
+    </div>
+    <div id="error" class="error-message" style="display: none;"></div>
+    <div id="tableContainer" class="table-container"></div>
+  </section>
+</main>
+<footer>
+  <p>Contacts: zhurba.alexander@example.com</p>
+</footer>
+</body>
+</html>
